@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sever Grace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F0E6D7',
+                        "background-light": '#FFFFFF',
+                        "background-dark": '#1A1A1A',
+                        "surface-light": "#F9F9F9",
+                        "surface-dark": "#2C2C2C",
+                        "text-light": "#1E1E1E",
+                        "text-dark": "#E0E0E0",
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '12px',
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="container mx-auto px-4">
+<header class="flex justify-between items-center py-6">
+<h1 class="text-xl font-bold">SEVER GRACE</h1>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-sm" href="#">Home</a>
+<a class="text-sm font-semibold border-b-2 border-black dark:border-white" href="#">Shop</a>
+<a class="text-sm" href="#">About Us</a>
+<a class="text-sm" href="#">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<span class="material-icons">search</span>
+<span class="material-icons">person_outline</span>
+<button class="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">BAG (0)</button>
+</div>
+</header>
+<main class="grid md:grid-cols-2 gap-16 my-12">
+<div>
+<div class="bg-gray-100 dark:bg-surface-dark rounded-xl p-8">
+<img alt="Silver ring with interwoven bands and small diamonds" class="w-full h-auto object-cover rounded-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfSlAH0CpPGZlJGLIDA39uPJIElDECEZHdzEwOOG5-ZhjRO0LPKgXspLY9iH4tUViSHNH5aorMNHCqi8o6poYjFJbsXaPAZ5EOuloeXlBj_LMcc2hGM2KyfcWyx4kEFdaYANPkRDcFVouA8zi2MpYlbRNcSZKrSelyoDBh0R1clkguWB6fqPmQJUlGyYSTxowqFael2Gui-LafiLyigJ6BWxXvI2-RefyNjPAnh80exVhVO8NuE_2eYdanz4h7jmKh2ATDZCSMKiUl"/>
+</div>
+<div class="flex justify-center space-x-4 mt-4">
+<div class="p-2 border border-gray-300 dark:border-gray-600 rounded-lg">
+<img alt="Side view of the silver ring" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG8MQtlhEqNBkGAFZa_4h9Dft84LHuSl2ZR_JJ6VGMPzvZW5yoQBxhg8LRZ5yZ1Edff6Sik55V8BREAHTBNuEyI3EtkFx-VdYjm2Y0NuVuEzR7mkji50QUswC1GTRiXVFMLxwo3QRzxBC-lF_uc_V_h3wvO3fntLUQ1r1Im1DiFjF7ynhiTeVYD3BDd0IGtDpg8_iLcJ23A77WY01-jOf771iFhgkMKQxxWxxDJmp5hGiKLtxIwYZttK-BIdgKKbYRpJpMqhcNejUQ"/>
+</div>
+<div class="p-2 bg-gray-100 dark:bg-surface-dark rounded-lg">
+<img alt="Top view of the silver ring" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKFIenqvTy7GbeKX3qUq1CpA0nyKBOwEmXg6sQLnDlkiqnNXa88PvHxr9MFDSGQXlas6A2rqyMqK6gxhXN329nOVcLUyFrTh0mT9fpX-YcpFdO5j-UFuhS-JBqf3cAMuCw57ju-BAslKa4ca0TaPOCVJ1eQXHY1l26fsgJqrhgRqlDhZunadQmm00WVyF_fZ-gji4-9DSwK0-HW2p0tZiNGBrzbGAIxs0e3ALr5vfXQ_gL4IQgigHGIKiYXNwe-TUPJYwMGllCEerC"/>
+</div>
+<div class="p-2 bg-gray-100 dark:bg-surface-dark rounded-lg">
+<img alt="Another side view of the silver ring" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBya1Xgx1r8_yKIoOm312zW7rlC4ow7yiRlHG9Cg-KjWY_NLdkrwKBRPtGPkM_lk-azGORdT-PPh6STwNofSlKyEI7ZCzymavBCLOY7SxAq0CaWBG5wbAFlppSbgW8DoKtAXpNklDabvX-8R34rgOxTHFTBlLmA-suVuyr2Ib_cknhBGw8Lljj-05P2nbozsidoeYZgD1R0gO7UM21RCcatJWUMIJ5fpJPQSA2iYPkBAG2oDZH5zfm-GP5eYGfV-re1G-DHvwXr999r"/>
+</div>
+<div class="p-2 bg-gray-100 dark:bg-surface-dark rounded-lg">
+<img alt="Angled view of the silver ring" class="w-20 h-20 object-cover rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYN-f-o_C9rkEyY16khUGPTQUFrRx2vGat5P1fkE4x2ChtoR7c2vFoPPqfIzO0RaNX1pexbEZ9qyr9SleUuYAKMbC4flS335G5D7336y7PkU99lvGZJbAf4Bxloktmqj0VWCDSEEy43BVy9Udxjyjy1z7eFLlVTdiigsAbzxyCWjU5pDxmRcteEBVNETriPnne_j76N-ji9VAOJwN_etdUICCFTOMmWWVnFB-jpObRa55nUBEilDGEvq8RCE0o1R9aBtVIelI9Ioly"/>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-3xl font-bold">Silver Ring</h2>
+<p class="text-2xl my-4">$ 79.00</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                </p>
+<div class="mt-6">
+<p class="text-sm font-semibold">Color</p>
+<div class="flex space-x-2 mt-2">
+<button class="w-6 h-6 rounded-full bg-yellow-400 border-2 border-black dark:border-white"></button>
+<button class="w-6 h-6 rounded-full bg-green-700"></button>
+<button class="w-6 h-6 rounded-full bg-yellow-800"></button>
+</div>
+</div>
+<div class="mt-6 flex items-center space-x-4">
+<div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-full px-4 py-2">
+<button class="text-gray-500 dark:text-gray-400">-</button>
+<span class="px-4 font-semibold">1</span>
+<button class="text-gray-500 dark:text-gray-400">+</button>
+</div>
+<button class="bg-black dark:bg-white text-white dark:text-black font-semibold py-3 px-8 rounded-full flex-grow">ADD TO BAG</button>
+</div>
+<div class="mt-8 text-sm text-gray-500 dark:text-gray-400">
+<p>SKU: 1234</p>
+<p>Category: <a class="underline" href="#">Women</a>, <a class="underline" href="#">Jewellery</a>, <a class="underline" href="#">Rings</a></p>
+<p>Tags: <a class="underline" href="#">Fashion</a>, <a class="underline" href="#">Modern</a>, <a class="underline" href="#">New</a></p>
+</div>
+</div>
+</main>
+<section class="bg-yellow-50 dark:bg-yellow-900/20 py-20 my-16 rounded-xl text-center">
+<h3 class="text-3xl font-bold">Making Shine &amp; Happy Place</h3>
+<p class="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eum eu rebumputate abhorreant, qui ut quis.
+            </p>
+<div class="mt-10 mx-auto max-w-4xl">
+<img alt="A collection of silver rings on a reflective surface" class="rounded-xl w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ9GCK0WHsreTb9oYNcfAMIavoKZC23dQtoK4abb5X1E3r8mmHo6wgC68mdAY0r5giu6WgnKvKzzJuzf9HzYcSqCjKp5Dk3cuyIJ8Gd_al0O0bv9FP85aG2id0ypRUlasqCt_kpCUsBUZkO7D8rc-8IhfCY8sp4sgsDJY6gFLSiMJA1TD-LL3cukGmSSavYDQStfcFcaDfH0Q4aoXIjfr8M02BtolyFK9dpzZBLIQQarzVz_zNaE7yeV2alh6LpakV4-Cwv17lLvQE"/>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
+<div class="relative">
+<img alt="Silver snake-like ring on a person's hand" class="rounded-xl w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFveMi1LfEH7ocqBmiQvz68l3Y86tKx-pUexu6qj47EetHN1pla0arRjImDYckQKUbkQxe9_Xwcgj7EQXroukGZh4btqgFgvFO2r-Bkac7NuKHrG6w01VKww6KunzPpEazHHp2jVGODemMTRicXv36IcWknR5xiIaUcLlW-dwETtbH2cX-jCnvveaaFY6ALPWa48UoraRTUkYIzbLplMQJE-nZK3EoD0qIuVnjjeBPD2cExgm_k_DrJTVNEaUjXzD2CYOsPFHYyYqJ"/>
+<div class="absolute inset-0 bg-black bg-opacity-20 rounded-xl flex items-end p-6">
+<h4 class="text-white text-2xl font-bold">Silver Fit For <br/> Your Body</h4>
+</div>
+</div>
+<div>
+<img alt="A collection of various silver bracelets and rings" class="rounded-xl w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpJtYx07O1grrcObInkqQkxnZz68oQYij7A4ilMUb-uifCkIwO3W6ENex8UAS5t64Q9AHrvBnygN59Stj5Sl7d7fJzEtoXG_GKt7dWBL5jZxC09Oe_-EKbKykQGI8tLq3d-lYhOqtGb5qw4PT-skgqk48sS1ix8O0ZoeXoKIpOWCAGQQ012sjyn5LS9DMBu3UPJMcN0xpKfPjiBx14l9o6Z8z1zNc0nJfRxxog4C5g0X0sdGWsIqDMONMDwGlUeE0dvNaBERkhPds2"/>
+</div>
+</div>
+</section>
+<section class="my-20">
+<h3 class="text-3xl font-bold text-center">Customer Reviews</h3>
+<div class="grid md:grid-cols-3 gap-8 mt-10">
+<div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+<h4 class="font-semibold">Very Good Product</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-2">"Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam." 🔥</p>
+<div class="flex items-center mt-4">
+<img alt="Avatar of Dianna Russell" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv9evxAo_K_kcMyTWQow9d17U16U58WD4-uN-6Eds9A6sQ9D0Ih5RqymZCXi0Zyf1fxppbJIa-a1fSBtcKDKYFa5m5_dn6hsOBdNMKwh5Goyr9wDEO0femRNQ0fjv-WKVpBlauZRExokTw7qQMcREBFzPaFj_qVtCmj5FzLNmWFa80z--VdPI9_ujVAiGRrSo9A5Ghaq-nQGXvuewXxYBoi_dcuZxOtMKpEA_7hF2MmRTw9QhuLr90zCel6su_j1kl4QuPyNaCz60F"/>
+<p class="ml-3 text-sm font-semibold">Dianna Russell</p>
+</div>
+</div>
+<div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+<h4 class="font-semibold">Enthusiastic Support</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-2">"Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 🔥</p>
+<div class="flex items-center mt-4">
+<img alt="Avatar of Eduarda Lovalace" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFN8P-PniZ7wapDZSQ48iX5ecG9FhFwngsROL4VOXgEJh1AR5ne1I3duUlil-zBsr8OLk2-jwxHHRDzWgH2VTaFih64o1qMh8V_6tJJcVlV5krVT4TZRXV5m9YWi_7DrLI9q_Vfb314Y6AN46ULbmF3ANVT6ncv42gnvOE_t8hrEn75Dt7JmKmGqlCZamX0I9i1MdcUgUNTKq2OBoP3u6-ZODGfIAsDTVtUiBxeZKxe-DsFznpwjNInv-24oAekRyG7TSCXkWjVv0d"/>
+<p class="ml-3 text-sm font-semibold">Eduarda Lovalace</p>
+</div>
+</div>
+<div class="border border-gray-200 dark:border-gray-700 rounded-xl p-6">
+<h4 class="font-semibold">Fast Shipping</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-2">"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud." 🔥</p>
+<div class="flex items-center mt-4">
+<img alt="Avatar of Leo Titaniun" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNm-XogAPH7B4sfA53nE8eUGEuohPcHdSZIYxfyjDOhHrLZy1JqBvRxZFRAiu5F08Gt3IzBAElfwl4muhlVA_1XM02alODbZTLsi4zF3ulXWEErgW6Peem0L2IGmu02dXw8URR6FEKSN_jR-IASXhXW4Kd_Cqowr40f7spl1KPc9386X9-2EfgJziMs3dx_GEeyaC70MOjB8qu1sInzq4CBIX_Um7O0t3OXg6ovm43hRPhpHbF2wOQY-UutoXEAxtOJbEJjTRCFRX9"/>
+<p class="ml-3 text-sm font-semibold">Leo Titaniun</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<button class="border border-gray-300 dark:border-gray-600 rounded-full px-6 py-2 text-sm font-semibold">See More</button>
+</div>
+</section>
+<section class="my-20">
+<h3 class="text-3xl font-bold text-center">Related Product</h3>
+<div class="grid md:grid-cols-3 gap-8 mt-10">
+<div class="text-center">
+<div class="bg-gray-100 dark:bg-surface-dark rounded-xl p-8">
+<img alt="Silver beaded necklace" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkOh397U6ytZa6sqLOlnnYARf0IySAn2J-KEsXlGEA4BWlFyYxAvhGDfjuuLNJLHH77jDtUS7kpNJDsgZoPDDdunVF75HUlDkjwixzvvG8KARjgAb1vrXG0ToTx9_ppVwvF5ah_qHHXx1FzCAHhRDghkRJ5-BC0WL4tRHUbc1-MqyO-9GiFAf5mTXfBKwMbvk_aAfjY1PSVKLLlppn-a-aE8oaxtBp-cTZpM9dVYhAIRNio6A6Q-GtxP40R4LY311yMCg5lBB5hxth"/>
+</div>
+<h4 class="mt-4 font-semibold">Lorem Ipsum</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">$ 79.00</p>
+</div>
+<div class="text-center">
+<div class="bg-gray-100 dark:bg-surface-dark rounded-xl p-8">
+<img alt="Silver necklace with multiple hoops" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmtwUv74Xc3IfXDB2g8i-TIK3lChQkBjWjyEH2ru43nGpMYliTiMavQd-IcKrFiOI_nbbY7MJHT7DwYG2MRhFm3Fn3QoGKCmGMiKEKzFwFZoiAS_6N-mvxiG6S-0ft6qhJ385ASpVeqJtiYJrQHZRLn9fGNKsGNxqZtf2TaD7KprgSF3cLFTC1YAEk2b2qqZlPOydYYX4PyTvZWYRpla9uHG7MOBSsWcSL8fqHZYaZAlX28xMs0yqDe9iVLJ3dy6CSSRpuX1R8Xmid"/>
+</div>
+<h4 class="mt-4 font-semibold">Lorem Ipsum</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">$ 79.00</p>
+</div>
+<div class="text-center">
+<div class="bg-gray-100 dark:bg-surface-dark rounded-xl p-8">
+<img alt="Silver necklace with a pendant" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Ibr0BcTBDPClLZrmBxgA1gH9DOwIeYU_QrbllzNe6ByYypxGdhN39roDMo-1rbpx1crk6WYB87osbb02Nz26yMAHwnHUuKugEgJdFEjWf0f9keaPTVFYxRLvGgg5XM95KWFC7kvNPtlzEnLI20wQ7O9m_4mnjHmO9WSXRSDp-CEHugSYj-d-B2rrwGa8LrL9a1TchbWtYgSd5D9urVOiMAnUFelNIbrmD2mSNshA-evnffZQUoLH7Wu7itYeCZeZqkJdERQltIDZ"/>
+</div>
+<h4 class="mt-4 font-semibold">Lorem Ipsum</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">$ 79.00</p>
+</div>
+</div>
+</section>
+<footer class="bg-yellow-50 dark:bg-yellow-900/20 py-16 mt-20 rounded-t-xl">
+<div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+<div>
+<h4 class="text-xl font-bold">SEVER GRACE</h4>
+</div>
+<div>
+<h5 class="font-semibold">Products</h5>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-300">
+<li><a href="#">Rings</a></li>
+<li><a href="#">Bracelet</a></li>
+<li><a href="#">Necklace</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold">About Us</h5>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-300">
+<li><a href="#">Our Story</a></li>
+<li><a href="#">Our Team</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold">Follow Us</h5>
+<ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-300">
+<li><a href="#">Instagram</a></li>
+<li><a href="#">Facebook</a></li>
+<li><a href="#">Twitter</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
