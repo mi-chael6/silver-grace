@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProductListing.css';
 import Header from '../../../components/header/Header';
 import Footer from '../../../components/footer/Footer';
@@ -9,15 +9,29 @@ export default function ProductListing() {
   const navigate = useNavigate();
   const [selectedFilter, setSelectedFilter] = useState('All Products');
 
-  const filters = ['All Products', 'Rings', 'Necklace', 'Bracelet', 'Earrings', 'Watch'];
+  const filters = ['All Products', 'Ring', 'Necklace', 'Bracelet', 'Earrings'];
+
+  const filteredProducts =
+    selectedFilter === 'All Products'
+      ? products
+      : products.filter(
+        (item) =>
+          item.product_type.toLowerCase() === selectedFilter.toLowerCase()
+      );
+
+
 
   return (
     <div className='productlisting-container'>
       <Header />
+
       <div className='productlisting-body'>
         <div className='productlisting-title'>
           <label className='products'>Products</label>
-          <img src={require('../assets/title_back.png')} alt='title background' />
+          <img
+            src={require('../assets/title_back.png')}
+            alt='title background'
+          />
         </div>
 
         <div className='productlisting-filter'>
@@ -33,13 +47,16 @@ export default function ProductListing() {
         </div>
 
         <div className='productlisting-list'>
-          {products.map((item, index) => (
+          {filteredProducts.map((item, index) => (
             <div
               className='productlisting-card'
               key={index}
-              onClick={() => navigate('/product')}
+              onClick={() => navigate('/product', { state: { product: item } })}
             >
-              <img src={item.product_img} alt={item.product_name} />
+              <img
+                src={item.product_img[0].product_img_1}
+                alt={item.product_name}
+              />
               <p>{item.product_name}</p>
               <span>₱ {item.product_price}</span>
             </div>
@@ -47,8 +64,12 @@ export default function ProductListing() {
         </div>
 
         <div className='productlisting-navigation'>
-          <button><img src={require('../assets/left.png')} alt='left' /></button>
-          <button><img src={require('../assets/right.png')} alt='right' /></button>
+          <button>
+            <img src={require('../assets/left.png')} alt='left' />
+          </button>
+          <button>
+            <img src={require('../assets/right.png')} alt='right' />
+          </button>
         </div>
       </div>
       <Footer />

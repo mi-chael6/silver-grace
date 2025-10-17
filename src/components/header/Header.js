@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import './Header.css'
 import '../../index.css'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 export default function Header() {
+  const navigate = useNavigate();
+
+  const quant = JSON.parse(localStorage.getItem('cart'))
+
   return (
     <div className='header'>
       <img className='header-logo' src={require('../../assets/SILVER GRACE.png')} />
@@ -15,7 +19,8 @@ export default function Header() {
       </div>
       <div className='header-actions'>
         <img className='header-icon' src={require('../../assets/user.png')} />
-        <button className='header-cart-btn'>CART</button>
+        <button className='header-cart-btn' onClick={() => navigate('/cart')}>CART ({quant ? quant.length : 0})</button>
+
       </div>
     </div>
 
