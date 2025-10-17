@@ -1,0 +1,88 @@
+.productlisting-title {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 3.5rem;
+}
+
+.productlisting-title img {
+    position: absolute;
+    width: 100%; 
+    z-index: 0; 
+}
+
+.productlisting-title .products {
+    font-weight: 500;
+    font-size: 3.5rem;
+    position: relative;
+    z-index: 1; 
+}
+
+.productlisting-filter {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0rem 15rem;
+}
+
+.productlisting-filter button {
+    border-style: none;
+    background-color: white;
+    border: 1.5px gray solid;
+    border-radius: 20px;
+    padding: 0.7rem 1rem;
+}
+
+.productlisting-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 10rem;
+    align-items: flex-start;
+}
+
+
+.productlisting-card img {
+    width: 300px;
+    height: 300px;
+}
+
+.productlisting-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0rem;
+}
+
+.productlisting-navigation button{
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px gray solid
+}
+
+.productlisting-filter button {
+  border: 1.5px solid gray;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.productlisting-filter button.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.productlisting-filter button:hover {
+  background-color: black;
+  color: white;
+}
