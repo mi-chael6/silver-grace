@@ -74,7 +74,7 @@
   border-radius: 5rem;
   border: none;
   background-color: #eff422;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

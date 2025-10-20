@@ -30,6 +30,8 @@ export default function Cart() {
   const handleRemoveItem = (index) => {
     const updatedItems = cartItems.filter((_, i) => i !== index);
     setCartItems(updatedItems);
+    localStorage.removeItem('cart')
+    localStorage.setItem('cart', JSON.stringify(updatedItems));
   };
 
   const totalPrice = cartItems?.reduce(

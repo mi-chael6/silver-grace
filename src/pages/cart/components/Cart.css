@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 3.5rem;
+  padding: 1rem 3.5rem;
 }
 
 .cart-title img {
@@ -100,6 +100,7 @@
   margin-top: 3rem;
   border-top: 1px solid #ddd;
   padding-top: 1.5rem;
+  margin-bottom: 8rem;
 }
 
 .checkout-btn {

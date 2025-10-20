@@ -11,6 +11,7 @@ export default function Product_Detail() {
     const product = location.state.product;
 
     const [cart, setCart] = useState([]);
+    const [quant, setQuant] = useState(1);
 
     useEffect(() => {
         const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -25,15 +26,18 @@ export default function Product_Detail() {
 
         if (itemIndex >= 0) {
             existingCart[itemIndex].quantity =
-                (existingCart[itemIndex].quantity || 1) + 1;
+                (existingCart[itemIndex].quantity || 1) + quant;
         } else {
-            existingCart.push({ ...product, quantity: 1 });
+            existingCart.push({ ...product, quantity: quant });
         }
 
         setCart(existingCart);
+        setQuant(1)
         localStorage.setItem('cart', JSON.stringify(existingCart));
-        alert('Product added to cart!');
+        alert(`${quant} item(s) added to cart!`);
     };
+
+
 
     const relatedProducts = products.filter(
         (p) => p.product_type === product.product_type && p.product_name !== product.product_name
@@ -67,9 +71,15 @@ export default function Product_Detail() {
 
                         <div className='productdetail-actions'>
                             <div className='productdetail-actions-quant'>
-                                <button>-</button>
-                                <label>1</label>
-                                <button>+</button>
+                                <button
+                                    onClick={() => {
+                                        if (quant > 1) setQuant(quant - 1);
+                                    }}
+                                >
+                                    -
+                                </button>
+                                <label>{quant}</label>
+                                <button onClick={() => setQuant(quant + 1)}>+</button>
                             </div>
                             <button
                                 className='productdetail-actions-add2cart'
@@ -104,7 +114,6 @@ export default function Product_Detail() {
                 <div className='productdetail-customerreviews'>
                     <label className='productdetail-customerreviews-title'>Customer Reviews</label>
                     <hr className='productdetail-customerreviews-hr' />
-
                     <div className='productdetail-customerreviews-details'>
                         <div className='productdetail-customerreviews-cont'>
                             <div className='productdetail-customerreviews-card'>
@@ -130,8 +139,55 @@ export default function Product_Detail() {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div className='productdetail-customerreviews-cont'>
+                            <div className='productdetail-customerreviews-card'>
+                                <label className='productdetail-customerreviews-card-title'>
+                                    Elegant and Timeless
+                                </label>
+                                <hr className='productdetail-customerreviews-card-hr' />
+                                <label className='productdetail-customerreviews-card-comment'>
+                                    This piece is my new favorite! It’s simple yet classy, and it matches every outfit.
+                                    You can really tell it was made with care and precision.
+                                </label>
+                            </div>
+                            <div className='productdetail-customerreviews-customer'>
+                                <img
+                                    className='productdetail-customerreviews-customer-img'
+                                    src={require('../assets/user.jpg')}
+                                    alt='Customer Kawhi'
+                                />
+                                <div className='productdetail-customerreviews-customer-info'>
+                                    <label className='customer-name'>Kawhi</label>
+                                    <label className='customer-customer'>Customer</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='productdetail-customerreviews-cont'>
+                            <div className='productdetail-customerreviews-card'>
+                                <label className='productdetail-customerreviews-card-title'>
+                                    Perfect Gift Idea
+                                </label>
+                                <hr className='productdetail-customerreviews-card-hr' />
+                                <label className='productdetail-customerreviews-card-comment'>
+                                    Bought this as a gift, and my friend loved it! The packaging was beautiful,
+                                    and the jewelry looked even better in person. Definitely worth recommending!
+                                </label>
+                            </div>
+                            <div className='productdetail-customerreviews-customer'>
+                                <img
+                                    className='productdetail-customerreviews-customer-img'
+                                    src={require('../assets/user.jpg')}
+                                    alt='Customer Wacky Waks'
+                                />
+                                <div className='productdetail-customerreviews-customer-info'>
+                                    <label className='customer-name'>Wacky Waks</label>
+                                    <label className='customer-customer'>Customer</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <button className='add-review'>ADD A REVIEW</button>
                 </div>
 
@@ -168,7 +224,6 @@ export default function Product_Detail() {
                     </div>
                 </div>
             </div>
-
             <Footer />
         </div>
     );

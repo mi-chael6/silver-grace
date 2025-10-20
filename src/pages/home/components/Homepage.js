@@ -17,7 +17,7 @@ export default function Homepage() {
 
           <div className='homepage-hero-img-container'>
             <img className='homepage-hero-img' src={require('../assets/learn.png')} />
-            <span className='homepage-hero-img-text'>LEARN MORE</span>
+            <a href='/about' className='homepage-hero-img-text'>LEARN MORE</a>
           </div>
         </div>
 
